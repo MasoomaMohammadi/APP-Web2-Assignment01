@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Photo Gallery</title>
+  </head>
+  <body>
+    <div class="Gallery">
+      <h2>Places to visit 👌</h2>
+      <div class="images">
+        <img src="./images/bamyn-fit.jpg" alt="Bamian" onclick="changeImg(this)">
+        <img src="./images/download.jpeg" alt="Herat" onclick="changeImg(this)">
+        <img src="./images/noristan-m.jpg" alt="Noristan" onclick="changeImg(this)">
+        <img src="./images/p-66.jpg" alt="Kabul" onclick="changeImg(this)">
+      </div>
+      <div class="mean-img">
+        <div class="img-text">
+          <img id="meanimg" src="./images/noristan-m.jpg" alt="Noristan">
+          <div class="caption">Noristan</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function changeImg(img){
+        let meanimage = document.getElementById('meanimg');
+        meanimage.src = img.src;
+        meanimage.alt = img.alt;
+        document.querySelector(".caption").innerText = img.alt;
+      }
+    </script>
+  </body>
+</html>
